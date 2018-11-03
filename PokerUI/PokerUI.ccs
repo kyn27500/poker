@@ -1,0 +1,17 @@
+<Solution>
+  <PropertyGroup Name="PokerUI" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="res">
+          <Folder Name="csb">
+            <Project Name="login.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="login">
+            <Image Name="login.png" />
+          </Folder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
