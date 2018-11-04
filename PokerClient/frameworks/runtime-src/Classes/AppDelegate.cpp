@@ -105,7 +105,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     FileUtils::getInstance()->addSearchPath("src/64bit");
 #endif
     FileUtils::getInstance()->addSearchPath("src");
-    FileUtils::getInstance()->addSearchPath("res");
+	FileUtils::getInstance()->addSearchPath("res");
+	FileUtils::getInstance()->addSearchPath(FileUtils::getInstance()->getWritablePath()+"hotUpdate",true);
     if (engine->executeScriptFile("main.lua"))
     {
         return false;

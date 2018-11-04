@@ -1,0 +1,6 @@
+PokerClient/frameworks/runtime-src/proj.win32/Debug.win32/
+PokerClient/frameworks/cocos2d-x/cocos/2d/Debug.win32/
+PokerClient/frameworks/cocos2d-x/cocos/editor-support/spine/proj.win32/Debug.win32/libSpine.idb
+*.tlog
+*.db
+PokerClient/frameworks/runtime-src/proj.win32/.vs/

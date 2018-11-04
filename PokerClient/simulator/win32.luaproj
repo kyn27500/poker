@@ -1,0 +1,139 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>E439935D-B2A2-46AE-856D-2AA408428F33</ProjectGuid>
+    <!--$guid1$-->
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="win32\" />
+    <Folder Include="win32\res\" />
+    <Folder Include="win32\src\" />
+    <Folder Include="win32\src\app\" />
+    <Folder Include="win32\src\app\views\" />
+    <Folder Include="win32\src\cocos\" />
+    <Folder Include="win32\src\cocos\3d\" />
+    <Folder Include="win32\src\cocos\cocos2d\" />
+    <Folder Include="win32\src\cocos\cocosbuilder\" />
+    <Folder Include="win32\src\cocos\cocosdenshion\" />
+    <Folder Include="win32\src\cocos\cocostudio\" />
+    <Folder Include="win32\src\cocos\controller\" />
+    <Folder Include="win32\src\cocos\extension\" />
+    <Folder Include="win32\src\cocos\framework\" />
+    <Folder Include="win32\src\cocos\framework\components\" />
+    <Folder Include="win32\src\cocos\framework\extends\" />
+    <Folder Include="win32\src\cocos\network\" />
+    <Folder Include="win32\src\cocos\physics3d\" />
+    <Folder Include="win32\src\cocos\spine\" />
+    <Folder Include="win32\src\cocos\ui\" />
+    <Folder Include="win32\src\packages\" />
+    <Folder Include="win32\src\packages\mvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="win32\config.json" />
+    <Content Include="win32\glew32.dll" />
+    <Content Include="win32\iconv.dll" />
+    <Content Include="win32\libcocos2d.dll" />
+    <Content Include="win32\libcrypto-1_1.dll" />
+    <Content Include="win32\libcurl.dll" />
+    <Content Include="win32\libmpg123.dll" />
+    <Content Include="win32\libogg.dll" />
+    <Content Include="win32\libssl-1_1.dll" />
+    <Content Include="win32\libvorbis.dll" />
+    <Content Include="win32\libvorbisfile.dll" />
+    <Content Include="win32\lua51.dll" />
+    <Content Include="win32\OpenAL32.dll" />
+    <Content Include="win32\PokerClient.exe" />
+    <Content Include="win32\PokerClient.ilk" />
+    <Content Include="win32\PokerClient.pdb" />
+    <Content Include="win32\res\HelloWorld.png" />
+    <Content Include="win32\sqlite3.dll" />
+    <Content Include="win32\websockets.dll" />
+    <Content Include="win32\zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="win32\src\app\MyApp.lua" />
+    <Compile Include="win32\src\app\views\MainScene.lua" />
+    <Compile Include="win32\src\cocos\3d\3dConstants.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\bitExtend.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\Cocos2d.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\Cocos2dConstants.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\deprecated.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\DeprecatedCocos2dClass.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\DeprecatedCocos2dEnum.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\DeprecatedCocos2dFunc.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\DeprecatedOpenglEnum.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\DrawPrimitives.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\functions.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\json.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\luaj.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\luaoc.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\Opengl.lua" />
+    <Compile Include="win32\src\cocos\cocos2d\OpenglConstants.lua" />
+    <Compile Include="win32\src\cocos\cocosbuilder\CCBReaderLoad.lua" />
+    <Compile Include="win32\src\cocos\cocosbuilder\DeprecatedCocosBuilderClass.lua" />
+    <Compile Include="win32\src\cocos\cocosdenshion\AudioEngine.lua" />
+    <Compile Include="win32\src\cocos\cocosdenshion\DeprecatedCocosDenshionClass.lua" />
+    <Compile Include="win32\src\cocos\cocosdenshion\DeprecatedCocosDenshionFunc.lua" />
+    <Compile Include="win32\src\cocos\cocostudio\CocoStudio.lua" />
+    <Compile Include="win32\src\cocos\cocostudio\DeprecatedCocoStudioClass.lua" />
+    <Compile Include="win32\src\cocos\cocostudio\DeprecatedCocoStudioFunc.lua" />
+    <Compile Include="win32\src\cocos\cocostudio\StudioConstants.lua" />
+    <Compile Include="win32\src\cocos\controller\ControllerConstants.lua" />
+    <Compile Include="win32\src\cocos\extension\DeprecatedExtensionClass.lua" />
+    <Compile Include="win32\src\cocos\extension\DeprecatedExtensionEnum.lua" />
+    <Compile Include="win32\src\cocos\extension\DeprecatedExtensionFunc.lua" />
+    <Compile Include="win32\src\cocos\extension\ExtensionConstants.lua" />
+    <Compile Include="win32\src\cocos\framework\audio.lua" />
+    <Compile Include="win32\src\cocos\framework\components\event.lua" />
+    <Compile Include="win32\src\cocos\framework\device.lua" />
+    <Compile Include="win32\src\cocos\framework\display.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\LayerEx.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\MenuEx.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\NodeEx.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\SpriteEx.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UICheckBox.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UIEditBox.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UIListView.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UIPageView.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UIScrollView.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UISlider.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UITextField.lua" />
+    <Compile Include="win32\src\cocos\framework\extends\UIWidget.lua" />
+    <Compile Include="win32\src\cocos\framework\init.lua" />
+    <Compile Include="win32\src\cocos\framework\package_support.lua" />
+    <Compile Include="win32\src\cocos\framework\transition.lua" />
+    <Compile Include="win32\src\cocos\init.lua" />
+    <Compile Include="win32\src\cocos\network\DeprecatedNetworkClass.lua" />
+    <Compile Include="win32\src\cocos\network\DeprecatedNetworkEnum.lua" />
+    <Compile Include="win32\src\cocos\network\DeprecatedNetworkFunc.lua" />
+    <Compile Include="win32\src\cocos\network\NetworkConstants.lua" />
+    <Compile Include="win32\src\cocos\physics3d\physics3d-constants.lua" />
+    <Compile Include="win32\src\cocos\spine\SpineConstants.lua" />
+    <Compile Include="win32\src\cocos\ui\DeprecatedUIEnum.lua" />
+    <Compile Include="win32\src\cocos\ui\DeprecatedUIFunc.lua" />
+    <Compile Include="win32\src\cocos\ui\experimentalUIConstants.lua" />
+    <Compile Include="win32\src\cocos\ui\GuiConstants.lua" />
+    <Compile Include="win32\src\config.lua" />
+    <Compile Include="win32\src\main.lua" />
+    <Compile Include="win32\src\packages\mvc\AppBase.lua" />
+    <Compile Include="win32\src\packages\mvc\init.lua" />
+    <Compile Include="win32\src\packages\mvc\ViewBase.lua" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

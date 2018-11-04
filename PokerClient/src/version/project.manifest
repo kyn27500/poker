@@ -1,0 +1,17 @@
+{    
+	"packageUrl" : "http://192.168.1.6:80/hotUpdate/",    
+	"remoteVersionUrl" : "http://192.168.1.6:80/hotUpdate/version.manifest",    
+	"remoteManifestUrl" : "http://192.168.1.6:80/hotUpdate/project.manifest",    
+	"version" : "0.0.20171104",    
+	"engineVersion" : "Cocos2d-x v3.10",    
+	"assets" : {
+		"res/csb/login.csb" : {
+			"md5" : "cf05934b7ca8ee2ce37253780c3545ab"
+		}, 
+		"res/HelloWorld.png" : {
+			"md5" : "55ea4e952bf080f300379ec26723598b"
+		}
+	},    
+	"searchPaths" : [    
+	]    
+}
