@@ -4,3 +4,6 @@ PokerClient/frameworks/cocos2d-x/cocos/editor-support/spine/proj.win32/Debug.win
 *.tlog
 *.db
 PokerClient/frameworks/runtime-src/proj.win32/.vs/
+PokerClient/frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/build/
+PokerClient/out/
+PokerClient/simulator/android/

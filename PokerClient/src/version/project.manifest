@@ -2,7 +2,7 @@
 	"packageUrl" : "http://192.168.1.6:80/hotUpdate/",    
 	"remoteVersionUrl" : "http://192.168.1.6:80/hotUpdate/version.manifest",    
 	"remoteManifestUrl" : "http://192.168.1.6:80/hotUpdate/project.manifest",    
-	"version" : "0.0.20171104",    
+	"version" : "1541426486",    
 	"engineVersion" : "Cocos2d-x v3.10",    
 	"assets" : {
 		"res/csb/login.csb" : {
@@ -10,6 +10,207 @@
 		}, 
 		"res/HelloWorld.png" : {
 			"md5" : "55ea4e952bf080f300379ec26723598b"
+		}, 
+		"res/login/login.png" : {
+			"md5" : "1dc7012d29cd5b3bc6916799aecb72dd"
+		}, 
+		"src/cocos/3d/3dConstants.luac" : {
+			"md5" : "f9b3a17a323e116c2631b6e1dbc5b5f4"
+		}, 
+		"src/cocos/cocos2d/bitExtend.luac" : {
+			"md5" : "b7ba65ae2a08aa6e2fae59837873d91a"
+		}, 
+		"src/cocos/cocos2d/Cocos2d.luac" : {
+			"md5" : "b8f808e9fe07b0788ed06e291278ce15"
+		}, 
+		"src/cocos/cocos2d/Cocos2dConstants.luac" : {
+			"md5" : "41cea37f414977d755fd13d7a747a395"
+		}, 
+		"src/cocos/cocos2d/deprecated.luac" : {
+			"md5" : "f7fc30d59c6108655bb0ce6e98264c36"
+		}, 
+		"src/cocos/cocos2d/DeprecatedCocos2dClass.luac" : {
+			"md5" : "2d325ee07387d17510af2dcbdc97c652"
+		}, 
+		"src/cocos/cocos2d/DeprecatedCocos2dEnum.luac" : {
+			"md5" : "da85cec81a61cf006d4a7a38de3f3a59"
+		}, 
+		"src/cocos/cocos2d/DeprecatedCocos2dFunc.luac" : {
+			"md5" : "e5e59eb994398b396229a0eae85052dd"
+		}, 
+		"src/cocos/cocos2d/DeprecatedOpenglEnum.luac" : {
+			"md5" : "02f429ccfdf2b2caf98abea8da70b0a9"
+		}, 
+		"src/cocos/cocos2d/DrawPrimitives.luac" : {
+			"md5" : "f56c9d523036b6ccf1b6d56512107c71"
+		}, 
+		"src/cocos/cocos2d/functions.luac" : {
+			"md5" : "eb9052f0b135f62d91514c45e8c428dd"
+		}, 
+		"src/cocos/cocos2d/json.luac" : {
+			"md5" : "0fa17ac2024d1a693771ec68302503bb"
+		}, 
+		"src/cocos/cocos2d/luaj.luac" : {
+			"md5" : "c872fc1d8607044cd526e66630f92fab"
+		}, 
+		"src/cocos/cocos2d/luaoc.luac" : {
+			"md5" : "6bf341056792b840b149c1b6c868d261"
+		}, 
+		"src/cocos/cocos2d/Opengl.luac" : {
+			"md5" : "56b22f83f04ab704ff147dfab0f8fd7e"
+		}, 
+		"src/cocos/cocos2d/OpenglConstants.luac" : {
+			"md5" : "118ec6124abd09daf998280a4bd80bc3"
+		}, 
+		"src/cocos/cocosbuilder/CCBReaderLoad.luac" : {
+			"md5" : "bd5fd0624ea5f0be6428da23f93bc77a"
+		}, 
+		"src/cocos/cocosbuilder/DeprecatedCocosBuilderClass.luac" : {
+			"md5" : "8ff1462b4a3235e63807af7418b7bb70"
+		}, 
+		"src/cocos/cocosdenshion/AudioEngine.luac" : {
+			"md5" : "028ce0316de99d19cb09c0d9a30823aa"
+		}, 
+		"src/cocos/cocosdenshion/DeprecatedCocosDenshionClass.luac" : {
+			"md5" : "6fd45dd83c5831751b0beaa2d854af8e"
+		}, 
+		"src/cocos/cocosdenshion/DeprecatedCocosDenshionFunc.luac" : {
+			"md5" : "b31fc68bfe280d9219c58a8892504123"
+		}, 
+		"src/cocos/cocostudio/CocoStudio.luac" : {
+			"md5" : "44c2908f9e9d0b4aedd8d7f244f87fbb"
+		}, 
+		"src/cocos/cocostudio/DeprecatedCocoStudioClass.luac" : {
+			"md5" : "b6ccca43d36b7fd14ac231b09b86d3a4"
+		}, 
+		"src/cocos/cocostudio/DeprecatedCocoStudioFunc.luac" : {
+			"md5" : "43ac5b71778ade2853a5ad2c9727636b"
+		}, 
+		"src/cocos/cocostudio/StudioConstants.luac" : {
+			"md5" : "40c570cb52c97ca243649a44ddf0bdfa"
+		}, 
+		"src/cocos/controller/ControllerConstants.luac" : {
+			"md5" : "b5ad01fd7c4f7c25ca59d3f6efa20338"
+		}, 
+		"src/cocos/extension/DeprecatedExtensionClass.luac" : {
+			"md5" : "ed809a3829caa01d8ecb3987fa077f59"
+		}, 
+		"src/cocos/extension/DeprecatedExtensionEnum.luac" : {
+			"md5" : "fa5525f2fff32d2a30bf17443da3fde7"
+		}, 
+		"src/cocos/extension/DeprecatedExtensionFunc.luac" : {
+			"md5" : "f179b9efa55144eba4f5ef5b97420031"
+		}, 
+		"src/cocos/extension/ExtensionConstants.luac" : {
+			"md5" : "1f3d4a07ef21b087e3189f79b253fc65"
+		}, 
+		"src/cocos/framework/audio.luac" : {
+			"md5" : "b91c9602f2cdb85638e1e6cf985a0ca5"
+		}, 
+		"src/cocos/framework/components/event.luac" : {
+			"md5" : "eaa5efb87d6c02335abd935f8dd5ff92"
+		}, 
+		"src/cocos/framework/device.luac" : {
+			"md5" : "01492b42262a63257077b9ccea9823ad"
+		}, 
+		"src/cocos/framework/display.luac" : {
+			"md5" : "bf5acfe40bc67bf151373e21442a3e6d"
+		}, 
+		"src/cocos/framework/extends/LayerEx.luac" : {
+			"md5" : "9b68ff9aebd8d34649acdc1c7e77d97e"
+		}, 
+		"src/cocos/framework/extends/MenuEx.luac" : {
+			"md5" : "53ab2fb8f75063b43e66fd1f3ee8bbe9"
+		}, 
+		"src/cocos/framework/extends/NodeEx.luac" : {
+			"md5" : "95b45c393bb6e5590cb20bba7a0cbc1f"
+		}, 
+		"src/cocos/framework/extends/SpriteEx.luac" : {
+			"md5" : "221f07f304d2d1081622b47bcc73fd8a"
+		}, 
+		"src/cocos/framework/extends/UICheckBox.luac" : {
+			"md5" : "72155b9b0f8da805e9145734943b37a6"
+		}, 
+		"src/cocos/framework/extends/UIEditBox.luac" : {
+			"md5" : "88c6de030bccc827866d7a28c94a6d4d"
+		}, 
+		"src/cocos/framework/extends/UIListView.luac" : {
+			"md5" : "612348e06503344e36f82993e93bfc8f"
+		}, 
+		"src/cocos/framework/extends/UIPageView.luac" : {
+			"md5" : "95f5523c4298a9ad273834e1234a8e17"
+		}, 
+		"src/cocos/framework/extends/UIScrollView.luac" : {
+			"md5" : "19d69492e3fc3b18b01822543efee279"
+		}, 
+		"src/cocos/framework/extends/UISlider.luac" : {
+			"md5" : "775b7d67678e314b6b090912297936d0"
+		}, 
+		"src/cocos/framework/extends/UITextField.luac" : {
+			"md5" : "017aa8517909d6d7729edefe4ac17e91"
+		}, 
+		"src/cocos/framework/extends/UIWidget.luac" : {
+			"md5" : "f61362c1534f9744e73ee8af70a66b11"
+		}, 
+		"src/cocos/framework/init.luac" : {
+			"md5" : "ff5fd300166b03933096f12c128cdad6"
+		}, 
+		"src/cocos/framework/package_support.luac" : {
+			"md5" : "7f3c405cafee1643d80459d4700cfb87"
+		}, 
+		"src/cocos/framework/transition.luac" : {
+			"md5" : "704508de89fa9470532823cc89f12c9e"
+		}, 
+		"src/cocos/init.luac" : {
+			"md5" : "345b07d61e45e33233b6d573d4c71ce6"
+		}, 
+		"src/cocos/network/DeprecatedNetworkClass.luac" : {
+			"md5" : "e7b6478e0a99dd0ab663fa71d1218ada"
+		}, 
+		"src/cocos/network/DeprecatedNetworkEnum.luac" : {
+			"md5" : "408fd8d92a3f5c8b733b6ee33da33bc3"
+		}, 
+		"src/cocos/network/DeprecatedNetworkFunc.luac" : {
+			"md5" : "c8f49cb26b3fa8d09f360d29b4ce4487"
+		}, 
+		"src/cocos/network/NetworkConstants.luac" : {
+			"md5" : "6f917549c759738cb18a141a55fe38b9"
+		}, 
+		"src/cocos/physics3d/physics3d-constants.luac" : {
+			"md5" : "35f2c39f4f4e831f254930678b5741ba"
+		}, 
+		"src/cocos/spine/SpineConstants.luac" : {
+			"md5" : "db8a76fc65f04c073bfc1b84f376c4c7"
+		}, 
+		"src/cocos/ui/DeprecatedUIEnum.luac" : {
+			"md5" : "dc96db6eac32f78d1ced7df3ed9f3a27"
+		}, 
+		"src/cocos/ui/DeprecatedUIFunc.luac" : {
+			"md5" : "73a565fba238c90365b5a8fa1975b4d8"
+		}, 
+		"src/cocos/ui/experimentalUIConstants.luac" : {
+			"md5" : "9affd8c05d9662e60f8d7755a6d557ce"
+		}, 
+		"src/cocos/ui/GuiConstants.luac" : {
+			"md5" : "38aa69f842941222c7cf2dc78167cce3"
+		}, 
+		"src/common/CsbLoader.luac" : {
+			"md5" : "98bf5412e118e893f8688ecede3cdf05"
+		}, 
+		"src/common/HotUpdate.luac" : {
+			"md5" : "33c1c5c796b16f5ce7a9da6b1aa58866"
+		}, 
+		"src/common/init.luac" : {
+			"md5" : "15e94f86c9d92823929b7a8b017c8a4b"
+		}, 
+		"src/hall/Login.luac" : {
+			"md5" : "21f9ed0767db9c113aa28919a9352de2"
+		}, 
+		"src/hall/MainScene.luac" : {
+			"md5" : "1769253f52b7c27fdf00c45a87f3ca62"
+		}, 
+		"src/main.luac" : {
+			"md5" : "b5040e62e0daff2f9b7ae1a497827db6"
 		}
 	},    
 	"searchPaths" : [    

@@ -21,17 +21,8 @@ end
 
 --检查更新 
 function _M:PackageUpdateCheck()
-	-- local _FileUtils = cc.FileUtils:getInstance()
-	-- local _file_path = _FileUtils:getWritablePath().."hotUpdate/project.manifest.temp"
-	-- local _file_version_path = _FileUtils:getWritablePath().."hotUpdate/version.manifest"
-	-- if _FileUtils:isFileExist(_file_path) then
-	-- 	cc.FileUtils:getInstance():removeFile(_file_path)
-	-- 	cc.FileUtils:getInstance():removeFile(_file_version_path)
-	-- end	
-	
 	-- 检查是否需要热更脚本
 	self:checkIsUpdateScript(function(isUpdate,localVersion)
-
 		if isUpdate then
 			self:hotUpdate()
 		else
@@ -43,6 +34,7 @@ end
 -- 检查脚本版本号，如果本地脚本版本号大于线上，则不热更
 function _M:checkIsUpdateScript(fnCallback)
 	local localVersionData = json.decode(cc.FileUtils:getInstance():getStringFromFile("src/version/version.manifest"))
+	local localVersion = tonumber(localVersionData.version)
 	local xhr = cc.XMLHttpRequest:new()
 	xhr.timeout = 10
 	xhr:open("GET", localVersionData.remoteVersionUrl)
@@ -50,10 +42,11 @@ function _M:checkIsUpdateScript(fnCallback)
 		if xhr.readyState == 4 and xhr.status == 200 then
 			local response   = xhr.response -- 获得返回数据
 			local onlineVersionData = json.decode(response)
-			local localVersion = tonumber(string.sub(localVersionData.version,5))
-			local onlineVersion = tonumber(string.sub(onlineVersionData.version,5))
+			local onlineVersion = tonumber(onlineVersionData.version)
 			print("是否更新：",localVersion,onlineVersion,localVersion<onlineVersion,localVersion)
 			if fnCallback then fnCallback(localVersion<onlineVersion,localVersion) end
+		else
+			if fnCallback then fnCallback(false,localVersion) end
 		end
 	end
 	xhr:registerScriptHandler(onReadyStateChange)
@@ -107,18 +100,8 @@ function _M:hotUpdate()
             print("更新中..."..str)
 		elseif (cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED == event:getEventCode()) then
 			print("更新成功事件")
-			-- local msgbox = HNMsgBox:create("更新成功，请重启软件！")
-			-- if device.platform == "android" then 
-			-- 	msgbox:setCallBackForBtnSure(function ()
-			-- 		device.exit()
-			-- 	end)
-	  --       elseif device.platform == "ios" then
-			-- 	msgbox:setCallBackForBtnSure(function ()
-			-- 		os.exit()
-			-- 	end)
-			-- end
-			--local version = assetsManagerEx:getLocalManifest():getVersion()
-			--self:startGame(tostring(version))		
+			local version = assetsManagerEx:getLocalManifest():getVersion()
+			self:startGame(tostring(version))		
 		elseif (cc.EventAssetsManagerEx.EventCode.UPDATE_FAILED == event:getEventCode()) then
 			print("更新失败事件")
             assetsManagerEx:downloadFailedAssets() 

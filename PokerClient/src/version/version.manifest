@@ -1,7 +1,7 @@
 {    
-	"packageUrl" : "http://192.168.1.6:80/hotUpdate/version/",    
+	"packageUrl" : "http://192.168.1.6:80/hotUpdate/",    
 	"remoteVersionUrl" : "http://192.168.1.6:80/hotUpdate/version.manifest",    
 	"remoteManifestUrl" : "http://192.168.1.6:80/hotUpdate/project.manifest",    
-	"version" : "0.0.20171104",    
+	"version" : "1541426486",    
 	"engineVersion" : "Cocos2d-x v3.17"
 }

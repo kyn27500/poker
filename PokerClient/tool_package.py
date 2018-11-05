@@ -56,7 +56,25 @@ def run_cmd(cmdstr):
         print('run_cmd result = ' + str(ret))  
         exit(0)  
     else:  
-        print('run_cmd result = ' + str(ret))  
+        print('run_cmd result = ' + str(ret))
+
+def copyFile(pPath,newPath):
+    for file in os.listdir(pPath):
+        sourceFile = os.path.join(pPath,file)
+        targetFile = os.path.join(newPath,file)
+        if not os.path.exists(newPath):
+            os.makedirs(newPath)
+        if os.path.isfile(sourceFile):
+            if not (sourceFile.find(".svn") > 0 or sourceFile.find(".DS_Store") > 0):
+                # print(targetFile)
+                open(targetFile, "wb").write(open(sourceFile, "rb").read()) 
+        else:
+            if not (sourceFile.find(".svn") > 0 or sourceFile.find(".DS_Store") > 0):
+                # print(targetFile)
+                if not os.path.exists(targetFile):
+                    # print(targetFile)
+                    os.makedirs(targetFile)
+                copyFile(sourceFile,targetFile)
 
 if __name__ == "__main__": 
 
@@ -70,16 +88,20 @@ if __name__ == "__main__":
     # run_cmd("cocos luacompile -s src/ -d out/version/src -e  -k WH002xHNxBYBL -b caitouSign123!@# --disable-compile")
     run_cmd("cocos luacompile -s src/ -d out/src")	
     #shutil.copytree('./res',Android_Res+'/res',False)
+
     # 转到out目录
     os.chdir(curdir +"/out")
-    timeStr = time.strftime("%Y%m%d%H%M%S",time.localtime(time.time()))
+    if not os.path.exists("manifest"):
+        os.mkdir("manifest")
+    # timeStr = time.strftime("%Y%m%d%H%M%S",time.localtime(time.time()))
+    timeStr = int(time.time())
     xml = '{\
     \n\t"packageUrl" : "'+rooturl+'",\
     \n\t"remoteVersionUrl" : "'+rooturl+'version.manifest",\
     \n\t"remoteManifestUrl" : "'+rooturl+'project.manifest",\
-    \n\t"version" : "0.0.%s",\
+    \n\t"version" : "%s",\
     \n\t"engineVersion" : "Cocos2d-x v3.10",\
-    \n\n\t"assets" : {' % timeStr
+    \n\t"assets" : {' % timeStr
     walk(os.getcwd(), '')
     xml = xml[:-2]
     xml += '\n\t},\
@@ -87,7 +109,7 @@ if __name__ == "__main__":
     \n\t]\
     \n}'
 
-    f = open("project.manifest", "w+")
+    f = open("manifest/project.manifest", "w+")
     f.write(xml)
     f.close()
     print ("generate project.manifest finish.")
@@ -97,26 +119,23 @@ if __name__ == "__main__":
     \n\t"packageUrl" : "'+rooturl+'",\
     \n\t"remoteVersionUrl" : "'+rooturl+'version.manifest",\
     \n\t"remoteManifestUrl" : "'+rooturl+'project.manifest",\
-    \n\t"version" : "0.0.%s",\
+    \n\t"version" : "%s",\
     \n\t"engineVersion" : "Cocos2d-x v3.17"\n}' % timeStr
-    f = open("version.manifest", "w+")
+    f = open("manifest/version.manifest", "w+")
     f.write(xml)
     f.close()
     print("generate version.manifest finish.")
+
+    copyFile("manifest","./")
+    copyFile("manifest","src/version")
+    copyFile("manifest",curdir+"/src/version")
+    shutil.rmtree("manifest")
 
     # if  os.path.exists(os.getcwd() + '/' + project+'.zip'):	
     #     os.remove(os.getcwd() + '/' + project+'.zip')
     # shutil.make_archive(project,"zip",'./project')
     # print("zip finished!!!")
 
-    # 拷贝版本文件到开发目录以及当前out/version目录
-    # if  os.path.exists(curdir+'/src/version/'):	
-    #     shutil.rmtree(curdir+'/src/version')		
-    # shutil.copytree('./manifest',curdir+'/src/version',False)
-    # if  os.path.exists(os.getcwd() +'/version/src/version'):	
-    #     shutil.rmtree(os.getcwd() +'/version/src/version')		
-    # shutil.copytree('./manifest',os.getcwd() +'/version/src/version',False)	
-	
     # Android打包
     # run_cmd("cocos compile -p android -m release --ndk-mode release --compile-script 0 --lua-encrypt --lua-encrypt-key WH002xHNxBYBL --lua-encrypt-sign caitouSign123!@#")	
 	
